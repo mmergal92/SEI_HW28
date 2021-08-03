@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="roadtripDetailPage">
+<h1>Here's more info for the roadtrip</h1>
+<h3>RoadTrip Name: {{object.name}}</a></h3>
+<h4>First stop: {{object.location_1}} </h4>
+<p>State: {{object.state}} </p>
+<p>Type of Place: {{object.type_of_place}} </p>
+<h4>Second stop: {{object.location_2}} </h4>
+<p>State: {{object.state_2}} </p>
+<p>Type of Place: {{object.type_of_place_2}} </p>
+<h4>Third stop: {{object.location_3}} </h4>
+<p>State: {{object.state_3}} </p>
+<p>Type of Place: {{object.type_of_place_3}} </p>
+</div>
+<div class="card-action">
+    <a href = "{{ object.get_absolute_url }}/roadtrip/{{ object.id }}/update" class="btn">Edit</a>
+    <a href = "{{ object.get_absolute_url }}/roadtrip/{{ object.id }}/delete" class="btn">Delete</a>
+</div>
+
+{% endblock %}

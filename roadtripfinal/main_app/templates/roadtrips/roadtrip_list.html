@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="listheader">
+<h1>Here are the possible roadtrips:</h1>
+</div>
+<!-- {{ objects }} -->
+
+{% for instance in objects %}
+    <div class="card">
+        <div class="card-content">
+            <h3>RoadTrip Name: <a href="{{ instance.get_absolute_url }}/roadtrip/{{ instance.id }}">{{instance.name}}</a></h3>
+            <p>First stop: {{instance.location_1}} </p>
+            <p>Second stop: {{instance.location_2}} </p>
+            <p>Third stop: {{instance.location_3}} </p>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% endblock %}

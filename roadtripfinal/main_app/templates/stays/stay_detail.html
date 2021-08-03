@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="stayDetailPage">
+<h1>Here's more info for the Stay</h1>
+<h3>Name: {{object.lodging_name}}</a></h3>
+<h4>What type of place is it: {{object.type_of_place}} </h4>
+<p>State: {{object.state}} </p>
+<p>Cost: {{object.cost}} </p>
+<h4>Length of stay: {{object.length_of_stay}} </h4>
+<p>Notes: {{object.notes}} </p>
+</div>
+<!-- <div class="card-action">
+    <a href = "{{ object.get_absolute_url }}/stay/{{ object.id }}/update" class="btn">Edit</a>
+    <a href = "{{ object.get_absolute_url }}/stay/{{ object.id }}/delete" class="btn">Delete</a>
+</div> -->
+
+{% endblock %}
